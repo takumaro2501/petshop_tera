@@ -1,0 +1,372 @@
+@charset "utf-8";
+/* * {
+    outline: solid 1px #000;
+} */
+
+h1, h2, h3, body, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    line-height: 1.8;
+    background-color: rgba(197, 191, 163, 1.00);
+    color: #323232;
+}
+
+header {
+    background-color: rgba(80, 172, 239, 1.00);
+}
+
+header .inner {
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+header h1 {
+    padding: 10px 20px;
+}
+
+.nav-area {
+    flex: 1;
+    margin-left: 10px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    padding: 0 10px;
+    display: block;
+    line-height: 65px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: #0000ff;
+}
+
+nav li {
+    flex-grow: 1;
+    border-left: 3px solid #fff;
+}
+
+nav li:last-child {
+    border-right: 3px solid #fff;
+}
+
+footer {
+    background-color: #6FE3C0;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer a+a::before{
+    content:"｜"
+}
+
+.mainimage {
+    text-align: center;
+    width: 100%;
+}
+
+.inner {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+section {
+    margin-bottom: 80px;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #fff;
+}
+
+.philosophy {
+    overflow: hidden;
+    background-color: #D5EAD8;
+}
+
+.philosophy figure {
+    float: left;
+    width: 45%;
+}
+
+.news {
+    background-color: #DED799;
+}
+
+.news table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 90%;
+}
+
+.news td, .news th {
+    padding: 20px;
+    border: 1px solid #fff;
+    vertical-align: top;
+}
+
+.news tr:nth-child(odd) {
+    background: #D59533;
+}
+
+.news tr:nth-child(even) {
+    background: #DED46E;
+}
+
+.ranking {
+    background-color: #B5B5B6;
+}
+
+.ranking p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.ranking .box-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ranking .box {
+    width: 23%;
+    height: 25%;
+    text-align: center;
+}
+
+.ranking .box figure {
+    margin: 0 auto;
+}
+
+.rank-image {
+    position: relative;
+    padding-top: 100%;
+    background: gray;
+}
+
+.rank-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* hover時のボタンレイアウト */
+.button-area {
+    padding: 30px;
+    text-align: center;
+}
+
+.botton {
+    display: inline-block;
+    width: 200px;
+    height: 54px;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    z-index: 2;
+    border: 2px solid #333;
+    background: #333;
+    color: #fff;
+    text-align-last: center;
+    font-weight: bold;
+}
+
+.botton:hover {
+    background: #fff;
+    border-color: #1682ca;
+    color: #1682ca;
+}
+
+.botton:before, .botton:after {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    content: "";
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #333;
+}
+
+.botton:before {
+    right: 0;
+}
+
+.botton:after {
+    left: 0;
+}
+
+.botton:hover::before, .botton:hover::after {
+    width: 0;
+    background: #1682ca;
+}
+
+.botton, .botton:before, .botton:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: all .3s;
+}
+
+/* ハンバーガーメニュー */
+
+.open, .close {
+    display: none;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    left: -50vw;
+}
+
+@media screen and (max-width:1040px) {
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+    .inner {
+        max-width: calc(100% - 40px);
+    }
+}
+
+@media screen and (max-width:750px) {
+    .box {
+        width: 100%;
+    }
+    figure {
+        text-align: center;
+    }
+    header .inner {
+        display: block;
+    }
+    header h1 {
+        margin: 0 auto;
+        width: 16vw;
+    }
+    nav ul {
+        display: block;
+    }
+    nav li {
+        border-left: none;
+        border-bottom: 1px solid #fff;
+    }
+    nav li:last-child {
+        border-right: none;
+    }
+    .inner .philosophy figure {
+        margin: 0 auto;
+        float: none;
+        width: 75%;
+        padding-bottom: 30px;
+    }
+    .news table {
+        width: 100%;
+    }
+    .news th, .news td {
+        display: block;
+        text-align: center;
+    }
+    .box-area {
+        display: block;
+    }
+    /* ハンバーガーメニュー */
+    .open, .close {
+        display: block;
+    }
+    /* トグルメニュー */
+    .open {
+        position: fixed;
+        top:10px;
+        right: 10px;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #59b1eb;
+    }
+    .open span{
+        display: block;
+        height: 3px;
+        width: 25px;
+        background: #fff;
+        position: absolute;
+    }
+    .open span:nth-child(1){
+        top:12px
+    }
+    .open span:nth-child(2){
+        top:20px
+    }
+    .open span:nth-child(3){
+        top:27px
+    }
+    .open small{
+        position: absolute;
+        bottom: 5px;
+        color: #fff;
+        
+    }
+/* ナビゲーションを隠す */
+    .nav-area {
+        position: absolute;
+        left: 0vw;
+        top: -50vh;
+        width: 100%;
+        height: 50vh;
+        background-color: rgba(80, 172, 239, 1);
+        flex-direction: column;
+        margin:0;
+        transition: all .2s;
+    }
+    .close{
+        text-align: right;
+        font-size: 24px;
+        padding-right: 25px;
+        color: #fff;
+    }
+
+    input[type="checkbox"]:checked ~ .nav-area {
+        top: 0;
+    }
+    input[type="checkbox"]:checked ~  .back {
+        position: absolute;
+        left:0;
+        background: rgb(255, 255, 255, 0.8);
+        width: 100%;
+        height: 100%;
+    }
+
+    footer a{
+        display: none;
+    }
+}
